@@ -52,7 +52,6 @@ export const FileIntellisensePicker = React.forwardRef<
   const scrollRef = React.useRef<HTMLDivElement>(null);
 
   React.useEffect(() => {
-     
     setSelectedIndex(0);
   }, [filter]);
 

@@ -68,10 +68,10 @@ export const SlashCommandPicker = React.forwardRef<
   }, [filteredGroups]);
 
   React.useEffect(() => {
-     
     setSelectedIndex(0);
   }, [filter]);
 
+  // eslint-disable-next-line react-hooks/incompatible-library
   const virtualizer = useVirtualizer({
     count: flatRows.length,
     getScrollElement: () => scrollRef.current,

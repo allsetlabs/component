@@ -103,7 +103,6 @@ const relativeTimeFormat = new Intl.RelativeTimeFormat('en', {
 });
 
 export const CommitTimestamp = ({ date, className, children, ...props }: CommitTimestampProps) => {
-   
   const formatted = relativeTimeFormat.format(
     // eslint-disable-next-line react-hooks/purity
     Math.round((date.getTime() - Date.now()) / (1000 * 60 * 60 * 24)),

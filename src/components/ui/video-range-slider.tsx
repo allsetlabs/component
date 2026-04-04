@@ -33,7 +33,7 @@ export interface VideoRangeSliderProps {
  * Formats seconds to display format with 2 decimal places
  * e.g., 215.5 seconds -> "215.50"
  */
- 
+
 export function formatTimeToMSS(seconds: number): string {
   return seconds.toFixed(2);
 }
@@ -42,7 +42,7 @@ export function formatTimeToMSS(seconds: number): string {
  * Parses seconds string back to number
  * e.g., "215.50" -> 215.5 seconds
  */
- 
+
 export function parseMSSToSeconds(value: string): number {
   const parsed = parseFloat(value);
   return isNaN(parsed) ? 0 : parsed;
@@ -87,7 +87,7 @@ const VideoRangeSlider = React.forwardRef<HTMLDivElement, VideoRangeSliderProps>
       setDragging(handle);
     };
 
-    /* eslint-disable react-hooks/preserve-manual-memoization */
+    /* eslint-disable react-hooks/preserve-manual-memoization, react-hooks/exhaustive-deps */
     const handleMouseMove = React.useCallback(
       (e: MouseEvent) => {
         if (!dragging || disabled) return;
@@ -151,7 +151,7 @@ const VideoRangeSlider = React.forwardRef<HTMLDivElement, VideoRangeSliderProps>
         onThumbnailChange,
       ]
     );
-    /* eslint-enable react-hooks/preserve-manual-memoization */
+    /* eslint-enable react-hooks/preserve-manual-memoization, react-hooks/exhaustive-deps */
 
     const handleMouseUp = React.useCallback(() => {
       setDragging(null);
@@ -175,7 +175,7 @@ const VideoRangeSlider = React.forwardRef<HTMLDivElement, VideoRangeSliderProps>
       setDragging(handle);
     };
 
-    /* eslint-disable react-hooks/preserve-manual-memoization */
+    /* eslint-disable react-hooks/preserve-manual-memoization, react-hooks/exhaustive-deps */
     const handleTouchMove = React.useCallback(
       (e: TouchEvent) => {
         if (!dragging || disabled || e.touches.length === 0) return;
@@ -234,7 +234,7 @@ const VideoRangeSlider = React.forwardRef<HTMLDivElement, VideoRangeSliderProps>
         onThumbnailChange,
       ]
     );
-    /* eslint-enable react-hooks/preserve-manual-memoization */
+    /* eslint-enable react-hooks/preserve-manual-memoization, react-hooks/exhaustive-deps */
 
     const handleTouchEnd = React.useCallback(() => {
       setDragging(null);
