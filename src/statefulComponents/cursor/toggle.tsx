@@ -11,7 +11,7 @@ interface CursorToggleProps {
  * Toggle button for custom cursor
  * Only shows on devices that support fine pointer and don't prefer reduced motion
  */
-export default function CursorToggle({ onToggle }: CursorToggleProps) {
+export function CursorToggle({ onToggle }: CursorToggleProps) {
   const { isEnabled, toggleCursor, canUseCursor } = useCursorContext();
 
   // Don't render toggle on touch devices or if user prefers reduced motion

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import BackgroundGradient from './BackgroundGradient';
+import { BackgroundGradient } from './BackgroundGradient';
 
 const meta = {
   title: 'Utility/BackgroundGradient',

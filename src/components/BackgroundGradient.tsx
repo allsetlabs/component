@@ -45,7 +45,7 @@ const dimentions: Record<number, object> = {
   },
 };
 
-export default function BackgroundGradient({ className, orbCount = 3 }: BackgroundGradientProps) {
+export function BackgroundGradient({ className, orbCount = 3 }: BackgroundGradientProps) {
   return (
     <div
       className={cn('pointer-events-none fixed inset-0 z-0 overflow-hidden', className)}

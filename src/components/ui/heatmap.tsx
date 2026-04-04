@@ -226,7 +226,7 @@ function ValueIndicator({
   );
 }
 
-export default function Heatmap(props: HeatmapProps) {
+export function Heatmap(props: HeatmapProps) {
   const {
     data,
     startDate,

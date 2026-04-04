@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import Timeline, {
+import {
+  Timeline,
   TimelineItem,
   TimelineItemDate,
   TimelineItemDescription,

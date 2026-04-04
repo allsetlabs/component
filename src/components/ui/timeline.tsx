@@ -193,7 +193,7 @@ function useTimelineContext() {
   return context;
 }
 
-export default function Timeline({
+export function Timeline({
   children,
   className,
   horizItemWidth = 220,

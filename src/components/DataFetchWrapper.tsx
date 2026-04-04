@@ -35,7 +35,7 @@ interface DataFetchWrapperProps {
  * </DataFetchWrapper>
  * ```
  */
-export default function DataFetchWrapper({
+export function DataFetchWrapper({
   isLoading,
   error,
   isEmpty = false,

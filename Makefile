@@ -7,7 +7,7 @@ NC := \033[0m
 
 STORYBOOK_PORT := 6006
 
-.PHONY: help install start stop build clean
+.PHONY: help setup install start stop build clean
 
 help:
 	@echo "$(BLUE)Component Library Commands:$(NC)"
@@ -16,6 +16,11 @@ help:
 	@echo "  make stop     - Stop Storybook"
 	@echo "  make build    - Build Storybook static site"
 	@echo "  make clean    - Remove node_modules"
+
+setup:
+	@echo "$(BLUE)Checking system dependencies...$(NC)"
+	@command -v node >/dev/null 2>&1 || { echo "Installing Node.js..."; brew install node; }
+	@echo "$(GREEN)All system dependencies ready!$(NC)"
 
 install:
 	@echo "$(BLUE)Installing Component Library...$(NC)"

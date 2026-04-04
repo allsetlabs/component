@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { useState } from 'react';
 import { ThemeContext, Theme, ThemeContextType } from './context';
-import ThemeToggle from './toggle';
+import { ThemeToggle } from './toggle';
 
 function ThemeToggleWrapper() {
   const [theme, setThemeState] = useState<Theme>('system');

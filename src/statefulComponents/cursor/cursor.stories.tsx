@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { useState } from 'react';
 import { CursorContext, CursorContextType } from './context';
-import CursorToggle from './toggle';
+import { CursorToggle } from './toggle';
 
 function CursorToggleWrapper() {
   const [isEnabled, setIsEnabled] = useState(false);

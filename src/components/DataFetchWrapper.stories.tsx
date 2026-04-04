@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Package } from 'lucide-react';
-import DataFetchWrapper from './DataFetchWrapper';
+import { DataFetchWrapper } from './DataFetchWrapper';
 
 const meta = {
   title: 'Utility/DataFetchWrapper',

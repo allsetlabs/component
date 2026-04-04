@@ -177,7 +177,7 @@ function ClockSeparator({ size }: { size?: FlipClockSize }) {
   );
 }
 
-export default function FlipClock({
+export function FlipClock({
   countdown = false,
   targetDate,
   size,

@@ -2,7 +2,7 @@ import { Sun, Moon, Monitor } from 'lucide-react';
 import { useThemeContext, Theme } from './context';
 import { cn } from '../../lib/utils';
 
-export default function ThemeToggle() {
+export function ThemeToggle() {
   const { theme, setTheme } = useThemeContext();
 
   const options: { value: Theme; icon: React.ReactNode; label: string }[] = [
