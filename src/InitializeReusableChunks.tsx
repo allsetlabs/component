@@ -7,7 +7,7 @@ import { AuthProvider } from './statefulComponents/auth';
 import { TooltipProvider } from './components/ui/tooltip';
 import { useAuth } from './statefulComponents/auth/context';
 import { AuthLogin } from './components/auth-login';
-import DataFetchWrapper from './components/DataFetchWrapper';
+import { DataFetchWrapper } from './components/DataFetchWrapper';
 import type { AuthTokenResponse } from './types/auth';
 import './styles/index.css';
 
