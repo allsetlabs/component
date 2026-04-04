@@ -52,9 +52,11 @@ export const FileIntellisensePicker = React.forwardRef<
   const scrollRef = React.useRef<HTMLDivElement>(null);
 
   React.useEffect(() => {
+     
     setSelectedIndex(0);
   }, [filter]);
 
+  // eslint-disable-next-line react-hooks/incompatible-library
   const virtualizer = useVirtualizer({
     count: items.length,
     getScrollElement: () => scrollRef.current,

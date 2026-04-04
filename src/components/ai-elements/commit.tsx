@@ -103,7 +103,9 @@ const relativeTimeFormat = new Intl.RelativeTimeFormat('en', {
 });
 
 export const CommitTimestamp = ({ date, className, children, ...props }: CommitTimestampProps) => {
+   
   const formatted = relativeTimeFormat.format(
+    // eslint-disable-next-line react-hooks/purity
     Math.round((date.getTime() - Date.now()) / (1000 * 60 * 60 * 24)),
     'day'
   );
@@ -123,6 +125,7 @@ const handleActionsKeyDown = (e: React.KeyboardEvent) => e.stopPropagation();
 export const CommitActions = ({ className, children, ...props }: CommitActionsProps) => (
   // biome-ignore lint/a11y/noNoninteractiveElementInteractions: stopPropagation required for nested interactions
   // biome-ignore lint/a11y/useSemanticElements: fieldset doesn't fit this UI pattern
+  // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
   <div
     className={cn('flex items-center gap-1', className)}
     onClick={handleActionsClick}

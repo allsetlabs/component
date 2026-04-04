@@ -68,6 +68,7 @@ export const SlashCommandPicker = React.forwardRef<
   }, [filteredGroups]);
 
   React.useEffect(() => {
+     
     setSelectedIndex(0);
   }, [filter]);
 

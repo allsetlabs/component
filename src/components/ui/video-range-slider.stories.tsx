@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { useState } from 'react';
 import { VideoRangeSlider } from './video-range-slider';

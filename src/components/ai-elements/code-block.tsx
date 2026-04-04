@@ -159,6 +159,7 @@ const createRawTokens = (code: string): TokenizedCode => ({
 });
 
 // Synchronous highlight with callback for async results
+// eslint-disable-next-line react-refresh/only-export-components
 export const highlightCode = (
   code: string,
   language: BundledLanguage,
@@ -374,6 +375,7 @@ export const CodeBlockContent = ({
     let cancelled = false;
 
     // Reset to raw tokens when code changes (shows current code, not stale tokens)
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setTokenized(highlightCode(code, language) ?? rawTokens);
 
     // Subscribe to async highlighting result

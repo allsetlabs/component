@@ -48,6 +48,7 @@ const mediaCategoryIcons: Record<AttachmentMediaCategory, typeof ImageIcon> = {
 // Utility Functions
 // ============================================================================
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const getMediaCategory = (data: AttachmentData): AttachmentMediaCategory => {
   if (data.type === 'source-document') {
     return 'source';
@@ -71,6 +72,7 @@ export const getMediaCategory = (data: AttachmentData): AttachmentMediaCategory 
   return 'unknown';
 };
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const getAttachmentLabel = (data: AttachmentData): string => {
   if (data.type === 'source-document') {
     return data.title || data.filename || 'Source';
@@ -122,9 +124,11 @@ const AttachmentContext = createContext<AttachmentContextValue | null>(null);
 // Hooks
 // ============================================================================
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const useAttachmentsContext = () =>
   useContext(AttachmentsContext) ?? { variant: 'grid' as const };
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const useAttachmentContext = () => {
   const ctx = useContext(AttachmentContext);
   if (!ctx) {

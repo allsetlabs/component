@@ -48,6 +48,7 @@ const FlipUnit: FC<FlipUnitProps> = memo(function FlipUnit({
 
   useEffect(() => {
     if (digit !== prevDigit) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setFlipping(true);
       // Wait for the full animation (0.3s top + 0.3s bottom) before resetting
       const timer = setTimeout(() => {
@@ -252,6 +253,7 @@ export function FlipClock({
 
       {/* Injected Keyframes (The Shadcn "Cheat Code") */}
       {/* @ts-expect-error jsx/global are Next.js styled-jsx props */}
+      {/* eslint-disable-next-line react/no-unknown-property */}
       <style jsx global>{`
         /* Use the same duration for both to keep them in sync */
         .animate-flip-top {

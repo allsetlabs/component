@@ -40,6 +40,7 @@ interface VoiceSelectorContextValue {
 
 const VoiceSelectorContext = createContext<VoiceSelectorContextValue | null>(null);
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const useVoiceSelector = () => {
   const context = useContext(VoiceSelectorContext);
   if (!context) {

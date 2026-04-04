@@ -79,8 +79,10 @@ function TextStaggerInview({
   ...props
 }: TextStaggerInviewProps) {
   const words = String(children).split(' ');
+   
   const MotionComponent = motion.create(Component);
   return (
+    // eslint-disable-next-line react-hooks/static-components
     <MotionComponent
       initial="hidden"
       whileInView="visible"

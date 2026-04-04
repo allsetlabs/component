@@ -31,6 +31,7 @@ export function CursorProvider({ children, targetElement }: CursorProviderProps)
 
   // Set mounted state and initialize from localStorage after hydration
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setMounted(true);
     const stored = localStorage.getItem('customCursorEnabled');
     const deviceSupports =

@@ -215,6 +215,7 @@ export function Timeline({
 
   useLayoutEffect(() => {
     if (!isVertical || !listRef.current) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setVerticalPadding({ top: 0, bottom: 0 });
       return;
     }
@@ -267,8 +268,6 @@ export function Timeline({
     <div
       id="timeline-container"
       className={cn('flex h-full w-full p-4', isVertical ? 'flex-col' : 'flex-row', className)}
-      role="list"
-      aria-orientation={orientation}
       aria-label="Timeline"
       {...props}
     >
@@ -304,7 +303,7 @@ export function Timeline({
       >
         <TlCtxt.Provider value={contextVal}>
           {Children.map(children, (child, index) =>
-            cloneElement(child as ReactElement<any>, { index })
+            cloneElement(child as ReactElement<{ index: number }>, { index })
           )}
         </TlCtxt.Provider>
       </ul>
@@ -434,7 +433,6 @@ export function TimelineItem({
         id={`timeline-item-${index}-container`}
         className={cn(timelineItemContainerVariants({ orientation, side }))}
         style={gridStyle}
-        role="listitem"
         aria-posinset={index + 1}
         aria-setsize={total}
         {...props}

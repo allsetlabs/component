@@ -106,6 +106,7 @@ export interface PromptInputControllerProps {
 const PromptInputController = createContext<PromptInputControllerProps | null>(null);
 const ProviderAttachmentsContext = createContext<AttachmentsContext | null>(null);
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const usePromptInputController = () => {
   const ctx = useContext(PromptInputController);
   if (!ctx) {
@@ -119,6 +120,7 @@ export const usePromptInputController = () => {
 // Optional variants (do NOT throw). Useful for dual-mode components.
 const useOptionalPromptInputController = () => useContext(PromptInputController);
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const useProviderAttachments = () => {
   const ctx = useContext(ProviderAttachmentsContext);
   if (!ctx) {
@@ -263,6 +265,7 @@ export const PromptInputProvider = ({
 
 const LocalAttachmentsContext = createContext<AttachmentsContext | null>(null);
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const usePromptInputAttachments = () => {
   // Prefer local context (inside PromptInput) as it has validation, fall back to provider
   const provider = useOptionalProviderAttachments();
@@ -287,8 +290,10 @@ export interface ReferencedSourcesContext {
   clear: () => void;
 }
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const LocalReferencedSourcesContext = createContext<ReferencedSourcesContext | null>(null);
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const usePromptInputReferencedSources = () => {
   const ctx = useContext(LocalReferencedSourcesContext);
   if (!ctx) {
@@ -1123,6 +1128,7 @@ export type PromptInputTabLabelProps = HTMLAttributes<HTMLHeadingElement>;
 export const PromptInputTabLabel = ({ className, ...props }: PromptInputTabLabelProps) => (
   // Content provided via children in props
   // oxlint-disable-next-line eslint-plugin-jsx-a11y(heading-has-content)
+  // eslint-disable-next-line jsx-a11y/heading-has-content
   <h3 className={cn('mb-2 px-3 text-xs font-medium text-muted-foreground', className)} {...props} />
 );
 

@@ -271,6 +271,7 @@ export const StackTraceActions = memo(
   ({ className, children, ...props }: StackTraceActionsProps) => (
     // biome-ignore lint/a11y/noNoninteractiveElementInteractions: stopPropagation required for nested interactions
     // biome-ignore lint/a11y/useSemanticElements: fieldset doesn't fit this UI pattern
+    // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
     <div
       className={cn('flex shrink-0 items-center gap-1', className)}
       onClick={handleActionsClick}

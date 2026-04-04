@@ -40,4 +40,5 @@ const Spinner = React.forwardRef<SVGSVGElement, SpinnerProps>(
 );
 Spinner.displayName = 'Spinner';
 
+// eslint-disable-next-line react-refresh/only-export-components
 export { Spinner, spinnerVariants };

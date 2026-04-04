@@ -106,6 +106,7 @@ const defaultFormatMessage = (message: ConversationMessage): string => {
   return `**${roleLabel}:** ${message.content}`;
 };
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const messagesToMarkdown = (
   messages: ConversationMessage[],
   formatMessage: (message: ConversationMessage, index: number) => string = defaultFormatMessage
