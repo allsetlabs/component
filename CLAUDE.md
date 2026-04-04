@@ -30,6 +30,7 @@ npm install github:subbiah2806/component
 ### Setup in a consuming module
 
 1. **TypeScript paths** — add to `tsconfig.json`:
+
    ```json
    {
      "compilerOptions": {
@@ -41,12 +42,14 @@ npm install github:subbiah2806/component
    ```
 
 2. **Tailwind config** — extend the library's base config:
+
    ```js
    import baseConfig from '@allsetlabs/reusable/tailwind.config';
    export default { ...baseConfig };
    ```
 
 3. **Root wrapper** — wrap the app with `InitializeReusableChunks` (auto-imports styles and initializes all providers):
+
    ```tsx
    import { InitializeReusableChunks } from '@allsetlabs/reusable/InitializeReusableChunks';
 
