@@ -1,14 +1,14 @@
 # Component Library (@allsetlabs/reusable)
 
-## Goal
+## Purpose
 
 Shared React component library used by all frontend modules in this monorepo — the single source of UI components, styles, and design tokens.
 
-## Description
+## Mental Model
 
 Built with React, TypeScript, Tailwind CSS, and shadcn/ui patterns. This is a library package — not a standalone application. No build step required; consumers import directly from source. Other modules install it as `"@allsetlabs/reusable": "file:../forge"` (or `file:../../forge` for nested paths) and import via TypeScript path aliases.
 
-## Architecture
+## Where Things Go
 
 ```
 src/
@@ -27,9 +27,21 @@ src/
 
 Stack: React + TypeScript + Tailwind CSS v3 + shadcn/ui + Radix UI + CVA.
 
-## Progress
+## Development Commands
+
+- `make setup` — check system dependencies
+- `make install` — install package dependencies
+- `make start` — start Storybook on port 6006
+- `npm run type-check` — verify TypeScript
+- `npm run build-storybook` — verify Storybook build when component docs/stories change
+
+## Current Capabilities
 
 Stable and in active use across all modules. New components are added on demand as consuming modules need them.
+
+## Testing Expectations
+
+Run `npm run type-check` after code changes. For visual component changes, start Storybook with `make start`, inspect the affected component states, and check the browser console.
 
 ## Consuming Module Setup
 
